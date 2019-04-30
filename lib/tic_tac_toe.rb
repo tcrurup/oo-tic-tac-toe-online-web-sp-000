@@ -90,5 +90,9 @@ class TicTacToe
     winning_combination
   end
   
+  def full?
+    self.board.reject{ |space| space === "X" || space === "O" }.length > 0
+  end
+  
   
 end
