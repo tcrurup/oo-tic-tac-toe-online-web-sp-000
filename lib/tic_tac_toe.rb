@@ -39,7 +39,8 @@ class TicTacToe
   end
   
   def valid_move?(input)
+    
     index = input_to_index(input)
-    self.board[index]
+    index (0..8) 
   end
 end
