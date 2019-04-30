@@ -76,7 +76,7 @@ class TicTacToe
       end
     end
     
-    self.WIN_COMBINATIONS.each do |winning_combination|
+    self.class.WIN_COMBINATIONS.each do |winning_combination|
       if winning_combination.all? { |winning_space| x_positions.include?(winning_space) }
         winning_combination
       elsif winning_combination.all? { |winning_space| o_positions.include?(winning_space) }
