@@ -45,4 +45,8 @@ class TicTacToe
   def turn_count
     self.board.count{ |space| space === "X" || space === "O" }
   end
+  
+  def current_player
+    self.turn_count % 2 === 0 ? "X" : "O"
+  end
 end
