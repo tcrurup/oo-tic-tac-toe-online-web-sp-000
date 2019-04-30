@@ -66,7 +66,7 @@ class TicTacToe
   
   def won? 
     x_positions = []
-    o_position = []
+    o_positions = []
     
     self.board.each_with_index do |space, index|
       if space === "X"
