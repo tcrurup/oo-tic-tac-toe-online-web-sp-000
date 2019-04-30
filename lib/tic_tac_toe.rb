@@ -69,21 +69,22 @@ class TicTacToe
     o_positions = []
     
     self.board.each_with_index do |space, index|
-      if space == "X"
+      if space === "X"
         x_positions << index
-      elsif space == "O"
+      elsif space === "O"
         o_positions << index
       end
     end
     
-    WIN_COMBINATIONS.each do |winning_combination|
+    winning_combination = 
+    WIN_COMBINATIONS.each do |combonation|
       if( 
         winning_combination.all? { |winning_space| x_positions.include?(winning_space) }  ||
         winning_combination.all? { |winning_space| o_positions.include?(winning_space) }
       )
         return winning_combination
       else
-        return false
+        
       end
     end
     
