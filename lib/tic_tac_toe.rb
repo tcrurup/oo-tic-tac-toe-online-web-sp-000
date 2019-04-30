@@ -56,7 +56,7 @@ class TicTacToe
     index = -1
     until self.valid_move?(index) do
       puts "Enter a move from 1-9"
-      input = gets.chomp
+      input = gets.chomp.to_i
       index = self.input_to_index(input)
     end
     binding.pry
