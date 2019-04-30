@@ -37,4 +37,9 @@ class TicTacToe
   def position_taken?(index)
     self.board[index] == "X" || self.board[index] == "O" ? true : false
   end
+  
+  def valid_move?(input)
+    index = input_to_index(input)
+    self.board[index]
+  end
 end
