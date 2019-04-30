@@ -76,17 +76,17 @@ class TicTacToe
       end
     end
     
-    winning_combination = 
-    WIN_COMBINATIONS.each do |combonation|
+    winning_combination = false 
+    
+    WIN_COMBINATIONS.each do |combination|
       if( 
-        winning_combination.all? { |winning_space| x_positions.include?(winning_space) }  ||
-        winning_combination.all? { |winning_space| o_positions.include?(winning_space) }
+        combination.all? { |winning_space| x_positions.include?(winning_space) }  ||
+        combination.all? { |winning_space| o_positions.include?(winning_space) }
       )
-        return winning_combination
-      else
-        
+      winning_combination = combination
       end
     end
     
+    winning_combination
   end
 end
