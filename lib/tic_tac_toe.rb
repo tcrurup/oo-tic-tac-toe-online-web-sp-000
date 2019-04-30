@@ -91,7 +91,7 @@ class TicTacToe
   end
   
   def full?
-    self.board.reject{ |space| space === "X" || space === "O" }.length > 0
+    self.board.all?{ |space| space === "X" || space === "O" }
   end
   
   
