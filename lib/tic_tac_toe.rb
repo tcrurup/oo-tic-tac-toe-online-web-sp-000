@@ -57,7 +57,7 @@ class TicTacToe
       input = gets
       index = self.input_to_index(input)
     end
-    self.move(index, current_player)
+    self.move(index, self.current_player)
     self.display_board
   end
 end
