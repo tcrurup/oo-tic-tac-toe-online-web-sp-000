@@ -107,4 +107,16 @@ class TicTacToe
     winning_indexes ? self.board[winning_indexes[0]] : nil
   end
   
+  def play
+    until self.over?
+      self.turn
+    end
+    
+    if self.won?
+      puts "Congratulations #{self.winner}"
+    elsif self.draw?
+      puts "The game has ended in a draw."
+    end
+  end
+  
 end
