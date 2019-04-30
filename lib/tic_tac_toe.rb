@@ -94,5 +94,9 @@ class TicTacToe
     self.board.all?{ |space| space === "X" || space === "O" }
   end
   
+  def draw?
+    self.full? && !self.won? ? true : false
+  end
+  
   
 end
