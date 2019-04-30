@@ -63,4 +63,21 @@ class TicTacToe
       self.turn
     end
   end
+  
+  def won? 
+    x_positions = []
+    o_position = []
+    
+    self.board.each_with_index do |space, index|
+      if space === "X"
+        x_positions << index
+      elsif space === "O"
+        o_positions << index
+      end
+    end
+    
+    self.WIN_COMBINATIONS.each do
+      
+    end
+  end
 end
