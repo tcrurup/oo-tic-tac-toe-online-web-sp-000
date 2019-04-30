@@ -55,7 +55,7 @@ class TicTacToe
     until valid_move?(index)
       puts "Enter a move from 1-9"
       input = gets
-      index = input_to_index(input)
+      index = self.input_to_index(input)
     end
     self.move(index, current_player)
     self.display_board
