@@ -1,3 +1,5 @@
+require 'pry'
+
 class TicTacToe 
   
   attr_accessor :board
@@ -57,6 +59,7 @@ class TicTacToe
       input = gets.chomp
       index = self.input_to_index(input)
     end
+    binding.pry
     self.move(index, self.current_player)
     self.display_board
   end
