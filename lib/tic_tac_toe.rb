@@ -76,7 +76,7 @@ class TicTacToe
       end
     end
     
-    self.WIN_COMBINATIONS.each do
+    self.WIN_COMBINATIONS.each do |combination_array|
       
     end
   end
