@@ -54,7 +54,7 @@ class TicTacToe
   
   def turn 
     index = -1
-    until self.valid_move?(index)
+    until self.valid_move?(index) do
       puts "Enter a move from 1-9"
       input = gets.chomp
       index = self.input_to_index(input)
