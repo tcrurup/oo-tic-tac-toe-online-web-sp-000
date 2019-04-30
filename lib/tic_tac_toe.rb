@@ -82,7 +82,7 @@ class TicTacToe
       elsif winning_combination.all? { |winning_space| o_positions.include?(winning_space) }
         return winning_combination
       else
-        return false
+        false
       end
     end
   end
