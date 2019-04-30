@@ -77,12 +77,15 @@ class TicTacToe
     end
     
     WIN_COMBINATIONS.each do |winning_combination|
-      if winning_combination.all? { |winning_space| x_positions.include?(winning_space) }
-      elsif winning_combination.all? { |winning_space| o_positions.include?(winning_space) }
+      if( 
+        winning_combination.all? { |winning_space| x_positions.include?(winning_space) }  ||
+        winning_combination.all? { |winning_space| o_positions.include?(winning_space) }
+      )
         return winning_combination
       else
-        false
+        return false
       end
     end
+    
   end
 end
