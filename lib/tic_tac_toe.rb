@@ -38,8 +38,7 @@ class TicTacToe
     self.board[index] == "X" || self.board[index] == "O" ? true : false
   end
   
-  def valid_move?(input)
-    index = input_to_index(input)
+  def valid_move?(index)
     (0..8) === index ? position_taken?(index) : false 
   end
 end
