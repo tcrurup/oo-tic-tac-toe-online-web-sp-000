@@ -4,4 +4,12 @@ require_relative '../lib/tic_tac_toe.rb'
 
 game = TicTacToe.new
 
-until game.
+until game.over?
+  game.turn
+  
+  if game.won?
+    
+  elsif game.draw?
+  
+  end
+end
