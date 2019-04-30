@@ -105,7 +105,6 @@ class TicTacToe
   def winner
     winning_indexes = self.won?
     winning_indexes ? self.board[winning_indexes[0]] : nil
-    self.board[winning_combination[0]]
   end
   
 end
