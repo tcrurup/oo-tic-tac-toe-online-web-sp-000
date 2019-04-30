@@ -53,14 +53,14 @@ class TicTacToe
   end
   
   def turn 
-    
-    until self.valid_move?(index) do
-      
-      input = gets.chomp.to_i
-      index = self.input_to_index(input)
+    puts "Enter a move from 1-9"
+    input = gets.chomp.to_i
+    index = input_to_index(input)
+    if self.valid_move?(index) 
+      self.move(index, self.current_player)
+      self.display_board
+    else
+      self.turn
     end
-    binding.pry
-    self.move(index, self.current_player)
-    self.display_board
   end
 end
