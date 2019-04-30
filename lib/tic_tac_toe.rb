@@ -51,7 +51,7 @@ class TicTacToe
   end
   
   def turn 
-    index = nil
+    index = -1
     while !valid_move?(index)
       puts "Enter a move from 1-9"
       index = input_to_index(gets)
