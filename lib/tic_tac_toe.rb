@@ -54,7 +54,7 @@ class TicTacToe
     index = nil
     while !valid_move(index)
       puts "Enter a move from 1-9"
-      input = gets 
-      index = input_to_index(input)
+      index = input_to_index(gets)
+    end
   end
 end
