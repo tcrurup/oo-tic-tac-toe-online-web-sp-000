@@ -34,4 +34,7 @@ class TicTacToe
     self.board[index] = player_token
   end
   
+  def position_taken?(index)
+    self.board[index] == "X" || self.board[index] == "O" ? true : false
+  end
 end
