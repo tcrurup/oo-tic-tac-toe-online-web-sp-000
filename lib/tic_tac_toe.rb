@@ -102,4 +102,9 @@ class TicTacToe
     self.won? || self.draw? ? true : false 
   end
   
+  def winner
+    winning_combination = self.won?
+    self.board[winning_combination[0]]
+  end
+  
 end
