@@ -41,4 +41,8 @@ class TicTacToe
   def valid_move?(index)
     index.between?(0,8) && !position_taken?(index) ? true : false 
   end
+  
+  def turn_count
+    self.board.count{ |space| space === "X" || space === "O" }
+  end
 end
